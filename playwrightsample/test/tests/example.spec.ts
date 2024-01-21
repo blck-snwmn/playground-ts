@@ -1,20 +1,21 @@
 import { expect, test } from "@playwright/test";
 
-test("has title", async ({ page }) => {
-	await page.goto("https://playwright.dev/");
+test('heading text', async ({ page }) => {
+	await page.goto('http://localhost:3000/');
 
-	// Expect a title "to contain" a substring.
-	await expect(page).toHaveTitle(/Playwright/);
+	await expect(page.getByRole('heading')).toHaveText('Hello Hono!');
 });
 
-test("get started link", async ({ page }) => {
-	await page.goto("https://playwright.dev/");
+test('list item', async ({ page }) => {
+	await page.goto('http://localhost:3000/');
 
-	// Click the get started link.
-	await page.getByRole("link", { name: "Get started" }).click();
+	const items = await page.getByRole('listitem')
+	await expect(items).toHaveCount(3);
+	await expect(items).toHaveText(['hello world!!', 'hello hono!!', 'hello jsx!!']);
+});
 
-	// Expects page to have a heading with the name of Installation.
-	await expect(
-		page.getByRole("heading", { name: "Installation" }),
-	).toBeVisible();
+test('p text', async ({ page }) => {
+	await page.goto('http://localhost:3000/');
+
+	await expect(page.getByRole('paragraph')).toHaveText('Here are the messages.');
 });
