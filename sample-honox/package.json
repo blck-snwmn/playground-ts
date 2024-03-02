@@ -9,13 +9,13 @@
   },
   "private": true,
   "dependencies": {
-    "hono": "^4.0.5",
-    "honox": "^0.1.4"
+    "hono": "^4.0.8",
+    "honox": "^0.1.5"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240208.0",
+    "@cloudflare/workers-types": "^4.20240222.0",
     "@hono/vite-cloudflare-pages": "^0.2.4",
     "vite": "^5.0.12",
-    "wrangler": "^3.27.0"
+    "wrangler": "^3.30.1"
   }
 }
