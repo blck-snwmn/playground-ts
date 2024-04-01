@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@biomejs/biome": "^1.5.3"
+    "@biomejs/biome": "^1.6.3"
   }
 }
