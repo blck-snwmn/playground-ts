@@ -12,6 +12,12 @@ importers:
         specifier: ^1.5.3
         version: 1.5.3
 
+  checkinclude:
+    devDependencies:
+      tsx:
+        specifier: ^4.7.1
+        version: 4.7.1
+
   html2svg:
     dependencies:
       react:
