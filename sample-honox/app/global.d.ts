@@ -7,10 +7,8 @@ type Head = {
 declare module "hono" {
 	// biome-ignore lint/complexity/noBannedTypes: <explanation>
 	type Env = {};
-	interface ContextRenderer {
-		(
-			content: string | Promise<string>,
-			head?: Head,
-		): Response | Promise<Response>;
-	}
+	type ContextRenderer = (
+		content: string | Promise<string>,
+		head?: Head,
+	) => Response | Promise<Response>;
 }

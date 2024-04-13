@@ -1,5 +1,5 @@
 const input = "testisblack";
-const check = "is"
+const check = "is";
 const index = input.indexOf(check);
 console.log(index);
 
