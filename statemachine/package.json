@@ -10,9 +10,9 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"tsx": "^4.7.1"
+		"tsx": "^4.7.2"
 	},
 	"dependencies": {
-		"xstate": "^5.8.2"
+		"xstate": "^5.10.0"
 	}
 }
