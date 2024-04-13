@@ -82,8 +82,8 @@ importers:
         specifier: ^0.2.4
         version: 0.2.5(hono@4.0.8)
       vite:
-        specifier: ^5.0.12
-        version: 5.1.4
+        specifier: ^5.1.7
+        version: 5.1.7
       wrangler:
         specifier: ^3.30.1
         version: 3.30.1(@cloudflare/workers-types@4.20240222.0)
@@ -2025,8 +2025,8 @@ packages:
       requires-port: 1.0.0
     dev: false
 
-  /vite@5.1.4:
-    resolution: {integrity: sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==}
+  /vite@5.1.7:
+    resolution: {integrity: sha512-sgnEEFTZYMui/sTlH1/XEnVNHMujOahPLGMxn1+5sIT45Xjng1Ec1K78jRP15dSmVgg5WBin9yO81j3o9OxofA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:

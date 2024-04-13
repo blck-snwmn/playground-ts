@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20240222.0",
 		"@hono/vite-cloudflare-pages": "^0.2.4",
-		"vite": "^5.0.12",
+		"vite": "^5.1.7",
 		"wrangler": "^3.30.1"
 	}
 }
