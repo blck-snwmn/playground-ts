@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: Greeting API
+  version: 1.0.0
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+servers:
+  - url: http://localhost:8080
+paths:
+  /v1/greet:
+    get:
+      summary: Greet a user
+      operationId: greetUser
+      parameters:
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '400':
+          description: Bad Request
