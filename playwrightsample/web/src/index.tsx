@@ -19,6 +19,7 @@ const Top: FC<{ messages: string[] }> = (props: { messages: string[] }) => {
 			<p>Here are the messages.</p>
 			<ul>
 				{props.messages.map((message) => {
+					// biome-ignore lint/correctness/useJsxKeyInIterable: <explanation>
 					return <li>{message}!!</li>;
 				})}
 			</ul>
