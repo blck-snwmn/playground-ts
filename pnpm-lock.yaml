@@ -56,6 +56,12 @@ importers:
         specifier: ^4.7.2
         version: 4.7.2
 
+  regexp:
+    devDependencies:
+      tsx:
+        specifier: ^4.7.2
+        version: 4.7.2
+
   sample-budoux:
     dependencies:
       budoux:
