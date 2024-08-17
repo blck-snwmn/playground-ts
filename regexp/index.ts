@@ -11,7 +11,9 @@ function tests(pattern: RegExp, inputs: string[]) {
 		const result = pattern.test(input);
 		const resultPad = `${result}`.padEnd(5, " ");
 		const afterIndex = pattern.lastIndex;
-		console.log(`lastIndex=${beforeIndex}->${afterIndex}, result=${resultPad}, input='${input}'`);
+		console.log(
+			`lastIndex=${beforeIndex}->${afterIndex}, result=${resultPad}, input='${input}'`,
+		);
 	}
 	console.log();
 }
