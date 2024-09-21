@@ -1,0 +1,19 @@
+{
+  "name": "sample-datefns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@date-fns/tz": "^1.0.2",
+    "date-fns": "^4.1.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.2"
+  }
+}
