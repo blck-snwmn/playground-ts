@@ -10,7 +10,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"budoux": "^0.6.2"
+		"budoux": "^0.7.0"
 	},
 	"devDependencies": {
 		"tsx": "^4.7.2"
