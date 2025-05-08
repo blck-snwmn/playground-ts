@@ -1,10 +1,9 @@
-import { tz, TZDate } from "@date-fns/tz";
+import { TZDate, tz } from "@date-fns/tz";
 import { addHours, format } from "date-fns";
 
 const nowD = new Date();
 const nowD2 = addHours(nowD, 1);
 console.log(nowD2.toString());
-
 
 const nowTZ = new TZDate(2024, 12, 1, "Asia/Singapore");
 const nowTZ2 = addHours(nowTZ, 1);
