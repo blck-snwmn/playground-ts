@@ -14,5 +14,5 @@ jobs:
           run_install: true
       - name: ci
         run: |
-          pnpm biome ci .
+          pnpm biome check .
 
