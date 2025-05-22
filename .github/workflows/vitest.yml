@@ -18,20 +18,10 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: lts/*
-          cache: 'pnpm'
-          cache-dependency-path: vitest-in-source-example/package-lock.json
-      
-      - name: Install dependencies
-        run: pnpm install
-      
-      - name: Run tests with coverage
-        run: pnpm vitest run --coverage
-      
+          version: 8
+          run_install: true
       - name: Generate coverage summary
         id: coverage
         run: |
