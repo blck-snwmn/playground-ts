@@ -1,0 +1,46 @@
+name: Vitest Tests
+
+on:
+  push:
+    paths:
+      - 'vitest-in-source-example/**'
+  pull_request:
+    paths:
+      - 'vitest-in-source-example/**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./vitest-in-source-example
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+          cache-dependency-path: vitest-in-source-example/package-lock.json
+      
+      - name: Install dependencies
+        run: pnpm install
+      
+      - name: Run tests with coverage
+        run: pnpm vitest run --coverage
+      
+      - name: Generate coverage summary
+        id: coverage
+        run: |
+          echo "summary<<EOF" >> $GITHUB_OUTPUT
+          pnpm vitest run --coverage.enabled=true --coverage.reporter=text-summary 2>&1 | tee /dev/stderr | grep -E "(Statements|Branches|Functions|Lines)" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: Add coverage summary to job
+        run: echo "${{ steps.coverage.outputs.summary }}"
+      
+      - name: Add coverage summary to job summary
+        run: echo "${{ steps.coverage.outputs.summary }}" >> $GITHUB_STEP_SUMMARY 
