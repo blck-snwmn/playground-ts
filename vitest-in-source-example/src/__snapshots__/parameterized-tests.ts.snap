@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Parameterized Tests and Snapshots > Snapshot testing examples > should match DataProcessor output snapshot 1`] = `
+{
+  "processed": [
+    {
+      "id": 1,
+      "name": "Item 1",
+      "processed": true,
+      "type": "product",
+    },
+    {
+      "id": 2,
+      "name": "Item 2",
+      "processed": true,
+      "type": "service",
+    },
+    {
+      "id": 3,
+      "name": "Item 3",
+      "processed": true,
+      "type": "digital",
+    },
+  ],
+  "stats": {
+    "invalid": 2,
+    "total": 5,
+    "valid": 3,
+  },
+}
+`;
+
+exports[`Parameterized Tests and Snapshots > Snapshot testing examples > should match user profile snapshot 1`] = `
+{
+  "age": 25,
+  "email": "miko@hololive.com",
+  "name": "Sakura Miko",
+  "preferences": [
+    "gaming",
+    "streaming",
+    "singing",
+  ],
+  "settings": {
+    "language": "en",
+    "notifications": true,
+    "theme": "light",
+  },
+  "stats": {
+    "lastLogin": null,
+    "loginCount": 0,
+  },
+}
+`;

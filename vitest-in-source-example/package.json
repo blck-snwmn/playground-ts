@@ -5,12 +5,18 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
-		"test": "vitest"
+		"test": "vitest",
+		"test:run": "vitest --run",
+		"test:coverage": "vitest --run --coverage",
+		"test:coverage:ui": "vitest --run --coverage --ui",
+		"test:coverage:watch": "vitest --coverage"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"@vitest/coverage-v8": "^1.6.0",
+		"@vitest/ui": "^1.6.0",
 		"typescript": "^5.4.5",
 		"vite": "^6.3.5",
 		"vitest": "^1.6.0"
