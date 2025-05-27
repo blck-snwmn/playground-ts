@@ -4,10 +4,10 @@
 		"enabled": true
 	},
 	"formatter": {
-		"ignore": ["node_modules/*", "*/build/*"]
+		"ignore": ["node_modules/*", "*/build/*", "**/coverage/**"]
 	},
 	"linter": {
-		"ignore": ["node_modules/*", "*/build/*"],
+		"ignore": ["node_modules/*", "*/build/*", "**/coverage/**"],
 		"enabled": true,
 		"rules": {
 			"recommended": true

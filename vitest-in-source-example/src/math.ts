@@ -103,7 +103,9 @@ if (import.meta.vitest) {
 			});
 
 			it("should throw error for negative numbers", () => {
-				expect(() => factorial(-1)).toThrow("Factorial is not defined for negative numbers");
+				expect(() => factorial(-1)).toThrow(
+					"Factorial is not defined for negative numbers",
+				);
 			});
 		});
 	});

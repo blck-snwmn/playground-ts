@@ -5,13 +5,14 @@ function greet(name: string): string {
 function greetWithTime(name: string, hour: number): string {
 	if (hour < 6) {
 		return `Good night, ${name}!`;
-	} else if (hour < 12) {
-		return `Good morning, ${name}!`;
-	} else if (hour < 18) {
-		return `Good afternoon, ${name}!`;
-	} else {
-		return `Good evening, ${name}!`;
 	}
+	if (hour < 12) {
+		return `Good morning, ${name}!`;
+	}
+	if (hour < 18) {
+		return `Good afternoon, ${name}!`;
+	}
+	return `Good evening, ${name}!`;
 }
 
 function formatName(firstName: string, lastName?: string): string {
