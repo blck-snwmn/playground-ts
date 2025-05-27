@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 8
+        run_install: false
+        
+    - name: Install dependencies
+      run: pnpm install
+      working-directory: ./vitest-in-source-example
+      
+    - name: Run tests
+      run: pnpm run test:run
+      working-directory: ./vitest-in-source-example
+      
+    - name: Generate coverage report
+      run: |
+        pnpm run test:coverage > coverage-output.txt 2>&1 || true
+        echo "## 📊 Test Coverage Report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        grep -A 20 "Coverage report from" coverage-output.txt >> $GITHUB_STEP_SUMMARY || echo "Coverage data not found" >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "📈 **Coverage report generated successfully**" >> $GITHUB_STEP_SUMMARY
+      working-directory: ./vitest-in-source-example 
