@@ -13,6 +13,6 @@
 		"budoux": "^0.6.2"
 	},
 	"devDependencies": {
-		"tsx": "^4.7.2"
+		"tsx": "^4.19.4"
 	}
 }
