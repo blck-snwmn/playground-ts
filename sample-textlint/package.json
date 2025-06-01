@@ -16,6 +16,6 @@
 		"@types/node": "^20.12.7",
 		"textlint": "^14.2.0",
 		"textlint-rule-no-todo": "^2.0.1",
-		"tsx": "^4.7.2"
+		"tsx": "^4.19.4"
 	}
 }
