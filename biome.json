@@ -1,13 +1,21 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.3.3/schema.json",
+	"files": {
+		"ignore": [
+			"node_modules/**",
+			"**/build/**",
+			"**/coverage/**",
+			"**/playwright/.cache/**",
+			"**/playwright-component-test/playwright/.cache/**",
+			"**/.cache/**",
+			"**/dist/**"
+		]
+	},
 	"organizeImports": {
 		"enabled": true
 	},
-	"formatter": {
-		"ignore": ["node_modules/*", "*/build/*", "**/coverage/**"]
-	},
+	"formatter": {},
 	"linter": {
-		"ignore": ["node_modules/*", "*/build/*", "**/coverage/**"],
 		"enabled": true,
 		"rules": {
 			"recommended": true
