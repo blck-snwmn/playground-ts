@@ -101,7 +101,6 @@ export function Input({
 				onKeyPress={onKeyPress}
 				onKeyUp={onKeyUp}
 				autoComplete={autoComplete}
-				autoFocus={autoFocus}
 				className={inputClassName}
 				aria-invalid={!!error}
 				aria-describedby={

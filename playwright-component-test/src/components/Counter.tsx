@@ -29,15 +29,15 @@ export function Counter({ initialCount = 0, onCountChange }: CounterProps) {
 		<div className="counter">
 			<h2>Counter Component</h2>
 			<div className="counter-display">
-				<button onClick={handleDecrement} aria-label="Decrement">
+				<button type="button" onClick={handleDecrement} aria-label="Decrement">
 					-
 				</button>
 				<span data-testid="count-value">{count}</span>
-				<button onClick={handleIncrement} aria-label="Increment">
+				<button type="button" onClick={handleIncrement} aria-label="Increment">
 					+
 				</button>
 			</div>
-			<button onClick={handleReset} className="reset-button">
+			<button type="button" onClick={handleReset} className="reset-button">
 				Reset
 			</button>
 		</div>

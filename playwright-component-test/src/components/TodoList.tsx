@@ -29,7 +29,7 @@ export function TodoList({
 			if (stored) {
 				try {
 					const parsed = JSON.parse(stored);
-					return parsed.map((todo: any) => ({
+					return parsed.map((todo: Todo) => ({
 						...todo,
 						createdAt: new Date(todo.createdAt),
 					}));
@@ -173,6 +173,7 @@ export function TodoList({
 			<div className="todo-controls">
 				<div className="todo-filters">
 					<button
+						type="button"
 						onClick={() => setFilter("all")}
 						className={filter === "all" ? "active" : ""}
 						data-testid="filter-all"
@@ -180,6 +181,7 @@ export function TodoList({
 						All
 					</button>
 					<button
+						type="button"
 						onClick={() => setFilter("active")}
 						className={filter === "active" ? "active" : ""}
 						data-testid="filter-active"
@@ -187,6 +189,7 @@ export function TodoList({
 						Active
 					</button>
 					<button
+						type="button"
 						onClick={() => setFilter("completed")}
 						className={filter === "completed" ? "active" : ""}
 						data-testid="filter-completed"
@@ -226,12 +229,16 @@ export function TodoList({
 									}}
 									className="todo-edit-input"
 									data-testid={`edit-input-${todo.id}`}
-									autoFocus
 								/>
-								<button onClick={saveEdit} data-testid={`save-btn-${todo.id}`}>
+								<button
+									type="button"
+									onClick={saveEdit}
+									data-testid={`save-btn-${todo.id}`}
+								>
 									Save
 								</button>
 								<button
+									type="button"
 									onClick={cancelEdit}
 									data-testid={`cancel-btn-${todo.id}`}
 								>
@@ -255,6 +262,7 @@ export function TodoList({
 									{todo.text}
 								</span>
 								<button
+									type="button"
 									onClick={() => deleteTodo(todo.id)}
 									className="todo-delete"
 									data-testid={`delete-btn-${todo.id}`}
@@ -270,6 +278,7 @@ export function TodoList({
 			{todos.length > 0 && (
 				<footer className="todo-footer">
 					<button
+						type="button"
 						onClick={toggleAll}
 						className="toggle-all-btn"
 						data-testid="toggle-all"
@@ -280,6 +289,7 @@ export function TodoList({
 					</button>
 					{stats.completed > 0 && (
 						<button
+							type="button"
 							onClick={clearCompleted}
 							className="clear-completed-btn"
 							data-testid="clear-completed"

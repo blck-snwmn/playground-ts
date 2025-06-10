@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/experimental-ct-react";
-import { TodoList } from "../src/components/TodoList";
+import { type Todo, TodoList } from "../src/components/TodoList";
 
 test.describe("TodoList Component", () => {
 	test("should render empty todo list", async ({ mount }) => {
@@ -375,8 +375,8 @@ test.describe("TodoList Component", () => {
 	});
 
 	test("should handle onTodoChange callback", async ({ mount }) => {
-		let capturedTodos: any[] = [];
-		const handleChange = (todos: any[]) => {
+		let capturedTodos: Todo[] = [];
+		const handleChange = (todos: Todo[]) => {
 			capturedTodos = todos;
 		};
 
@@ -412,7 +412,7 @@ test.describe("TodoList Component", () => {
 		);
 		expect(stored).toBeTruthy();
 
-		const parsed = JSON.parse(stored!);
+		const parsed = JSON.parse(stored as string);
 		expect(parsed).toHaveLength(1);
 		expect(parsed[0].text).toBe("Persisted todo");
 	});
