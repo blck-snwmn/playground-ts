@@ -11,11 +11,11 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@textlint/kernel": "^14.2.0",
-		"@textlint/module-interop": "^14.2.0",
-		"@types/node": "^20.12.7",
-		"textlint": "^14.2.0",
+		"@textlint/kernel": "^14.8.0",
+		"@textlint/module-interop": "^14.8.0",
+		"@types/node": "^24.0.0",
+		"textlint": "^14.8.0",
 		"textlint-rule-no-todo": "^2.0.1",
-		"tsx": "^4.7.2"
+		"tsx": "^4.20.1"
 	}
 }
