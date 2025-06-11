@@ -1,0 +1,19 @@
+{
+  "name": "sample-neverthrow",
+  "version": "1.0.0",
+  "description": "Sample project demonstrating neverthrow usage",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "neverthrow": "^6.1.0"
+  }
+}
