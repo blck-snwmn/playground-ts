@@ -10,11 +10,11 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/node": "^20.12.7",
-		"tsx": "^4.7.2"
+		"@types/node": "^24.0.0",
+		"tsx": "^4.20.1"
 	},
 	"dependencies": {
-		"react": "^18.2.0",
-		"satori": "^0.10.13"
+		"react": "^19.1.0",
+		"satori": "^0.15.2"
 	}
 }
