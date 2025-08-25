@@ -266,7 +266,7 @@ if (import.meta.vitest) {
 
 				// Remove timestamp for consistent snapshots
 				result.processed = result.processed.map((item) => {
-					const { timestamp, ...rest } = item;
+					const { timestamp: _timestamp, ...rest } = item;
 					return rest as ProcessedItem;
 				});
 
@@ -284,7 +284,7 @@ if (import.meta.vitest) {
 				const profile = generateUserProfile(userData);
 
 				// Remove dynamic fields for consistent snapshots
-				const { id, createdAt, ...staticProfile } = profile;
+				const { id: _id, createdAt: _createdAt, ...staticProfile } = profile;
 
 				expect(staticProfile).toMatchSnapshot();
 			});

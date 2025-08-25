@@ -1,4 +1,4 @@
-import { Result, err, fromPromise, fromThrowable, ok } from "neverthrow";
+import { err, fromPromise, fromThrowable, ok, Result } from "neverthrow";
 
 interface User {
 	id: number;
@@ -95,7 +95,7 @@ const fetchData = async (url: string) => {
 	return response.json();
 };
 
-const safeFetch = (url: string) =>
+const _safeFetch = (url: string) =>
 	fromPromise(fetchData(url), (error) => `Network error: ${error}`);
 
 const processUserData = async () => {

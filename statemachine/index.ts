@@ -1,4 +1,4 @@
-import { MachineSnapshot, assign, createActor, createMachine } from "xstate";
+import { assign, createActor, createMachine } from "xstate";
 
 const counter = {
 	count: 0,

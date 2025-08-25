@@ -1,4 +1,4 @@
-console.log(`pattern=\s, input=' ' =`, /\s/.test(" "));
+console.log(`pattern=s, input=' ' =`, /\s/.test(" "));
 
 tests(/\s+/, [" ", "  ", "g g", " g"]);
 tests(/\s+/g, [" ", "  ", "g g", " g"]);

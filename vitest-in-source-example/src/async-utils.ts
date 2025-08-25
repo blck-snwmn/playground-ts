@@ -38,12 +38,6 @@ export async function processDataBatch(items: string[]): Promise<string[]> {
 }
 
 export class ApiClient {
-	private baseUrl: string;
-
-	constructor(baseUrl = "https://api.example.com") {
-		this.baseUrl = baseUrl;
-	}
-
 	async get(endpoint: string): Promise<{ data: string }> {
 		// Simulate fetch call
 		await new Promise((resolve) => setTimeout(resolve, 200));
@@ -180,8 +174,8 @@ if (import.meta.vitest) {
 				await expect(client.get("/error")).rejects.toThrow("API Error");
 			});
 
-			it("should use custom base URL", () => {
-				const customClient = new ApiClient("https://custom.api.com");
+			it("should create instance correctly", () => {
+				const customClient = new ApiClient();
 				expect(customClient).toBeInstanceOf(ApiClient);
 			});
 		});
