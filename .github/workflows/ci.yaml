@@ -6,13 +6,33 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false  # 1つ失敗しても他を続行
+      matrix:
+        directory:
+          - checkinclude
+          - examplpe-remix-spa
+          - html2svg
+          - playwright-component-test
+          - regexp
+          - sample-budoux
+          - sample-datefns
+          - sample-honox
+          - sample-neverthrow
+          - sample-textlint
+          - statemachine
+          - vitest-in-source-example
+          - playwrightsample/test
+          - playwrightsample/web
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
         with:
-          version: 8
-          run_install: true
-      - name: ci
-        run: |
-          pnpm biome check .
+          version: 10.8.1
+      - name: Install dependencies
+        working-directory: ${{ matrix.directory }}
+        run: pnpm install
+      - name: Run Biome check
+        working-directory: ${{ matrix.directory }}
+        run: pnpm biome check .
 

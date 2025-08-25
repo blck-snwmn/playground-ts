@@ -8,6 +8,7 @@
 		"test-ct:ui": "playwright test -c playwright-ct.config.ts --ui"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "^2.2.2",
 		"@playwright/experimental-ct-react": "^1.49.0",
 		"@playwright/test": "^1.49.0",
 		"@types/react": "^18.3.3",
