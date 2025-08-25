@@ -5,7 +5,7 @@ export default function Counter() {
 	return (
 		<div>
 			<p>{count}</p>
-			{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+			{/* biome-ignore lint/a11y/useButtonType: Interactive button without form context */}
 			<button onClick={() => setCount(count + 1)}>Increment</button>
 		</div>
 	);
