@@ -7,7 +7,8 @@ jobs:
   check:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false  # 1つ失敗しても他を続行
+      fail-fast: false
+      max-parallel: 3
       matrix:
         directory:
           - checkinclude
@@ -26,12 +27,21 @@ jobs:
           - playwrightsample/web
     steps:
       - uses: actions/checkout@v4
+      
       - uses: pnpm/action-setup@v4
         with:
-          version: 10.8.1
+          version: 10
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+          cache-dependency-path: ${{ matrix.directory }}/pnpm-lock.yaml
+      
       - name: Install dependencies
         working-directory: ${{ matrix.directory }}
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+      
       - name: Run Biome check
         working-directory: ${{ matrix.directory }}
         run: pnpm biome check .
