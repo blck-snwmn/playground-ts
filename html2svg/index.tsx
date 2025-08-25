@@ -1,5 +1,4 @@
 import fs from "node:fs";
-import React from "react";
 import satori from "satori";
 
 (async () => {

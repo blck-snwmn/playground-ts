@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
 	"files": {
 		"includes": [
 			"**",
@@ -9,7 +9,8 @@
 			"!**/playwright/.cache/**",
 			"!**/playwright-component-test/playwright/.cache/**",
 			"!**/.cache/**",
-			"!**/dist/**"
+			"!**/dist/**",
+			"!**/test-results/**"
 		]
 	},
 	"assist": { "actions": { "source": { "organizeImports": "on" } } },

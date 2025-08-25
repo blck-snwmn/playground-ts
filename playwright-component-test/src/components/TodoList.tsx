@@ -254,13 +254,24 @@ export function TodoList({
 									className="todo-checkbox"
 									data-testid={`checkbox-${todo.id}`}
 								/>
-								<span
+								<button
+									type="button"
 									className="todo-text"
+									style={{
+										background: "none",
+										border: "none",
+										padding: 0,
+										font: "inherit",
+										cursor: "pointer",
+										textAlign: "left",
+										width: "100%",
+										display: "block",
+									}}
 									onDoubleClick={() => startEditing(todo)}
 									data-testid={`todo-text-${todo.id}`}
 								>
 									{todo.text}
-								</span>
+								</button>
 								<button
 									type="button"
 									onClick={() => deleteTodo(todo.id)}

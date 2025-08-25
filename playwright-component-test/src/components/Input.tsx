@@ -27,7 +27,6 @@ interface InputProps {
 	onKeyPress?: (e: KeyboardEvent<HTMLInputElement>) => void;
 	onKeyUp?: (e: KeyboardEvent<HTMLInputElement>) => void;
 	autoComplete?: string;
-	autoFocus?: boolean;
 	variant?: "outlined" | "filled" | "standard";
 	size?: "small" | "medium" | "large";
 }
@@ -54,7 +53,6 @@ export function Input({
 	onKeyPress,
 	onKeyUp,
 	autoComplete,
-	autoFocus = false,
 	variant = "outlined",
 	size = "medium",
 }: InputProps) {
@@ -101,7 +99,6 @@ export function Input({
 				onKeyPress={onKeyPress}
 				onKeyUp={onKeyUp}
 				autoComplete={autoComplete}
-				autoFocus={autoFocus}
 				className={inputClassName}
 				aria-invalid={!!error}
 				aria-describedby={

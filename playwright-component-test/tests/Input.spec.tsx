@@ -232,13 +232,6 @@ test.describe("Input Component", () => {
 		);
 	});
 
-	test("should handle autoFocus", async ({ mount }) => {
-		const component = await mount(<Input autoFocus />);
-		const input = component.getByTestId("input-element");
-
-		await expect(input).toBeFocused();
-	});
-
 	test("should apply error class when error exists", async ({ mount }) => {
 		const component = await mount(<Input error="Error message" />);
 

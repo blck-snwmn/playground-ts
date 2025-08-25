@@ -4,6 +4,7 @@ import {
 	redirect,
 	useActionData,
 } from "@remix-run/react";
+import { useId } from "react";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
@@ -19,13 +20,14 @@ export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
 
 export default function Greet() {
 	const resp = useActionData<typeof clientAction>();
+	const nameInputId = useId();
 	return (
 		<div className="font-sans p-4">
 			<h1 className="text-3xl">Hello, World!</h1>
 			<p className="mt-4">This is a Remix SPA route.</p>
 			<Form method="post" action="/greet">
-				<Label htmlFor="name">Name</Label>
-				<Input name="name" id="name" className="w-60" />
+				<Label htmlFor={nameInputId}>Name</Label>
+				<Input name="name" id={nameInputId} className="w-60" />
 				<Button type="submit" className="my-3">
 					Greet
 				</Button>
