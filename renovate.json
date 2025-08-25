@@ -5,39 +5,59 @@
     ":semanticCommitTypeAll(deps)"
   ],
   "timezone": "Asia/Tokyo",
-  "schedule": ["after 10pm every weekday", "before 5am every weekday", "every weekend"],
-  "labels": ["dependencies"],
-  "assignees": ["blck-snwmn"],
+  "schedule": [
+    "after 10pm every weekday",
+    "before 5am every weekday",
+    "every weekend"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "assignees": [
+    "blck-snwmn"
+  ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "groupName": "patch updates",
       "automerge": false,
       "minimumReleaseAge": "3 days"
     },
     {
-      "matchUpdateTypes": ["minor"],
+      "matchUpdateTypes": [
+        "minor"
+      ],
       "groupName": "minor updates",
       "automerge": false,
       "minimumReleaseAge": "7 days"
     },
     {
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "automerge": false,
       "minimumReleaseAge": "14 days"
     },
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "groupName": "devDependencies",
       "automerge": false
     },
     {
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "groupName": "GitHub Actions",
       "automerge": false
     },
     {
-      "matchPaths": ["**/package.json"],
+      "matchFileNames": [
+        "**/package.json"
+      ],
       "groupName": "{{{parentDir}}} dependencies",
       "commitMessageTopic": "{{{parentDir}}} dependencies"
     }
@@ -45,7 +65,14 @@
   "prConcurrentLimit": 10,
   "rebaseWhen": "behind-base-branch",
   "rangeStrategy": "bump",
-  "ignorePaths": ["**/node_modules/**"],
-  "enabledManagers": ["npm", "github-actions"],
-  "baseBranches": ["main"]
+  "ignorePaths": [
+    "**/node_modules/**"
+  ],
+  "enabledManagers": [
+    "npm",
+    "github-actions"
+  ],
+  "baseBranchPatterns": [
+    "main"
+  ]
 }
