@@ -12,10 +12,10 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.2",
-		"@textlint/kernel": "^14.2.0",
-		"@textlint/module-interop": "^14.2.0",
-		"@types/node": "^20.12.7",
-		"textlint": "^14.2.0",
+		"@textlint/kernel": "^15.2.1",
+		"@textlint/module-interop": "^15.2.1",
+		"@types/node": "^22.17.1",
+		"textlint": "^15.2.1",
 		"textlint-rule-no-todo": "^2.0.1",
 		"tsx": "^4.7.2"
 	}
