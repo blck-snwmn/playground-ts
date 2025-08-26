@@ -11,6 +11,6 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.2",
-		"tsx": "^4.7.2"
+		"tsx": "^4.20.4"
 	}
 }
