@@ -34,8 +34,12 @@ jobs:
             "playwrightsample/web"
           )
           
-          # Get changed files
-          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+          # Get changed files based on event type
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            # For PRs, compare against the base branch
+            CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+          elif [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            # For push events with a valid before commit
             CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
           else
             # For initial push or when before commit is not available
