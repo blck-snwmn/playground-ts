@@ -10,11 +10,11 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.2",
-		"@types/node": "^20.11.5",
+		"@types/node": "^22.17.1",
 		"tsx": "^4.7.0",
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {
-		"neverthrow": "^6.1.0"
+		"neverthrow": "^8.2.0"
 	}
 }
