@@ -4,6 +4,55 @@ on:
   push:
 
 jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      changed-dirs: ${{ steps.get-changed.outputs.dirs }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Get changed directories
+        id: get-changed
+        run: |
+          # Define all directories to check
+          DIRS=(
+            "checkinclude"
+            "examplpe-remix-spa"
+            "html2svg"
+            "playwright-component-test"
+            "regexp"
+            "sample-budoux"
+            "sample-datefns"
+            "sample-honox"
+            "sample-neverthrow"
+            "sample-textlint"
+            "statemachine"
+            "vitest-in-source-example"
+            "playwrightsample/test"
+            "playwrightsample/web"
+          )
+          
+          # Get changed files
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+          else
+            # For initial push or when before commit is not available
+            CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || git ls-tree -r --name-only HEAD)
+          fi
+          
+          # Check which directories have changes
+          CHANGED_DIRS="[]"
+          for dir in "${DIRS[@]}"; do
+            if echo "$CHANGED_FILES" | grep -q "^$dir/"; then
+              CHANGED_DIRS=$(echo "$CHANGED_DIRS" | jq -c ". + [\"$dir\"]")
+            fi
+          done
+          
+          echo "Changed directories: $CHANGED_DIRS"
+          echo "dirs=$CHANGED_DIRS" >> $GITHUB_OUTPUT
+
   check:
     runs-on: ubuntu-latest
     strategy:
