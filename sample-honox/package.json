@@ -13,10 +13,10 @@
 		"honox": "^0.1.11"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.2.2",
-		"@cloudflare/workers-types": "^4.20240405.0",
-		"@hono/vite-cloudflare-pages": "^0.2.4",
-		"vite": "^5.4.19",
-		"wrangler": "^3.50.0"
+		"@biomejs/biome": "2.2.2",
+		"@cloudflare/workers-types": "4.20250823.0",
+		"@hono/vite-cloudflare-pages": "0.2.5",
+		"vite": "5.4.19",
+		"wrangler": "3.114.14"
 	}
 }

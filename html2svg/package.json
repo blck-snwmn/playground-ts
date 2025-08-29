@@ -10,9 +10,9 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@biomejs/biome": "^2.2.2",
-		"@types/node": "^20.19.11",
-		"tsx": "^4.20.5"
+		"@biomejs/biome": "2.2.2",
+		"@types/node": "20.19.11",
+		"tsx": "4.20.5"
 	},
 	"dependencies": {
 		"react": "^18.3.1",

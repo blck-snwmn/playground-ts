@@ -16,19 +16,19 @@ importers:
         version: 0.1.44(hono@4.9.4)(miniflare@3.20250718.1)(wrangler@3.114.14(@cloudflare/workers-types@4.20250823.0))
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.2.2
+        specifier: 2.2.2
         version: 2.2.2
       '@cloudflare/workers-types':
-        specifier: ^4.20240405.0
+        specifier: 4.20250823.0
         version: 4.20250823.0
       '@hono/vite-cloudflare-pages':
-        specifier: ^0.2.4
+        specifier: 0.2.5
         version: 0.2.5(hono@4.9.4)
       vite:
-        specifier: ^5.4.19
+        specifier: 5.4.19
         version: 5.4.19
       wrangler:
-        specifier: ^3.50.0
+        specifier: 3.114.14
         version: 3.114.14(@cloudflare/workers-types@4.20250823.0)
 
 packages:
