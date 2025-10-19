@@ -13,7 +13,7 @@
 		"budoux": "^0.7.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.4",
+		"@biomejs/biome": "2.2.5",
 		"tsx": "4.20.5"
 	}
 }
