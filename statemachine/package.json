@@ -1,5 +1,6 @@
 {
 	"name": "statemachine",
+	"type": "module",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -10,8 +11,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@biomejs/biome": "2.2.5",
-		"tsx": "4.20.5"
+		"@biomejs/biome": "2.2.5"
 	},
 	"dependencies": {
 		"xstate": "^5.10.0"
