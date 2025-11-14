@@ -1,0 +1,13 @@
+{
+  "name": "tsx-node-comparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "tsx": "^4.20.6"
+  }
+}
