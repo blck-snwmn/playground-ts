@@ -8,6 +8,6 @@
   "license": "ISC",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
-    "tsx": "^4.20.6"
+    "tsx": "4.20.6"
   }
 }
