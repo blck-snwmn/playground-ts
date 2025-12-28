@@ -10,7 +10,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@biomejs/biome": "2.2.5",
+		"@biomejs/biome": "2.2.7",
 		"@types/node": "20.19.11",
 		"tsx": "4.20.5"
 	},
