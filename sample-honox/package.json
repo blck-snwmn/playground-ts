@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.2.7",
 		"@cloudflare/workers-types": "4.20250823.0",
-		"@hono/vite-cloudflare-pages": "0.4.2",
+		"@hono/vite-cloudflare-pages": "0.4.3",
 		"vite": "5.4.21",
 		"wrangler": "3.114.14"
 	}
