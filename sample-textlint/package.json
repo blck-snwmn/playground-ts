@@ -12,7 +12,7 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "2.2.7",
-		"@textlint/kernel": "15.2.2",
+		"@textlint/kernel": "15.2.3",
 		"@textlint/module-interop": "15.2.2",
 		"@types/node": "22.18.0",
 		"textlint": "15.2.2",
