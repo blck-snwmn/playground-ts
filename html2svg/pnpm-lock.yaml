@@ -19,8 +19,8 @@ importers:
         specifier: 2.2.7
         version: 2.2.7
       '@types/node':
-        specifier: 20.19.11
-        version: 20.19.11
+        specifier: 20.19.30
+        version: 20.19.30
       tsx:
         specifier: 4.20.5
         version: 4.20.5
@@ -241,8 +241,8 @@ packages:
     engines: {node: '>= 8.0.0'}
     hasBin: true
 
-  '@types/node@20.19.11':
-    resolution: {integrity: sha512-uug3FEEGv0r+jrecvUUpbY8lLisvIjg6AAic6a2bSP5OEOLeJsDSnvhCDov7ipFFMXS3orMpzlmi0ZcuGkBbow==}
+  '@types/node@20.19.30':
+    resolution: {integrity: sha512-WJtwWJu7UdlvzEAUm484QNg5eAoq5QR08KDNx7g45Usrs2NtOPiX8ugDqmKdXkyL03rBqU5dYNYVQetEpBHq2g==}
 
   base64-js@0.0.8:
     resolution: {integrity: sha512-3XSA2cR/h/73EzlXXdU6YNycmYI7+kicTxks4eJg2g39biHR84slg2+des+p7iHYhbRg/udIS4TD53WabcOUkw==}
@@ -468,7 +468,7 @@ snapshots:
       fflate: 0.7.4
       string.prototype.codepointat: 0.2.1
 
-  '@types/node@20.19.11':
+  '@types/node@20.19.30':
     dependencies:
       undici-types: 6.21.0
 
