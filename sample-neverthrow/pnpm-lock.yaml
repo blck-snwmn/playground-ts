@@ -16,8 +16,8 @@ importers:
         specifier: 2.2.7
         version: 2.2.7
       '@types/node':
-        specifier: 22.18.0
-        version: 22.18.0
+        specifier: 22.18.13
+        version: 22.18.13
       tsx:
         specifier: 4.20.5
         version: 4.20.5
@@ -241,8 +241,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@types/node@22.18.0':
-    resolution: {integrity: sha512-m5ObIqwsUp6BZzyiy4RdZpzWGub9bqLJMvZDD0QMXhxjqMHMENlj+SqF5QxoUwaQNFe+8kz8XM8ZQhqkQPTgMQ==}
+  '@types/node@22.18.13':
+    resolution: {integrity: sha512-Bo45YKIjnmFtv6I1TuC8AaHBbqXtIo+Om5fE4QiU1Tj8QR/qt+8O3BAtOimG5IFmwaWiPmB3Mv3jtYzBA4Us2A==}
 
   esbuild@0.25.9:
     resolution: {integrity: sha512-CRbODhYyQx3qp7ZEwzxOk4JBqmD/seJrzPa/cGjY1VtIn5E09Oi9/dB4JwctnfZ8Q8iT7rioVv5k/FNT/uf54g==}
@@ -395,7 +395,7 @@ snapshots:
   '@rollup/rollup-linux-x64-gnu@4.48.1':
     optional: true
 
-  '@types/node@22.18.0':
+  '@types/node@22.18.13':
     dependencies:
       undici-types: 6.21.0
 
