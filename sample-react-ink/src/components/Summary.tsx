@@ -1,6 +1,6 @@
-import React from 'react';
-import { Box, Text } from 'ink';
-import chalk from 'chalk';
+import React from "react";
+import { Box, Text } from "ink";
+import chalk from "chalk";
 
 interface SummaryProps {
   totalFiles: number;
@@ -15,16 +15,14 @@ export const Summary: React.FC<SummaryProps> = ({ totalFiles, elapsedTime }) => 
       </Text>
       <Box flexDirection="column" marginTop={1}>
         <Text>
-          {chalk.bold('Files processed:')} {totalFiles}
+          {chalk.bold("Files processed:")} {totalFiles}
         </Text>
         <Text>
-          {chalk.bold('Time elapsed:')} {elapsedTime.toFixed(2)}s
+          {chalk.bold("Time elapsed:")} {elapsedTime.toFixed(2)}s
         </Text>
       </Box>
       <Box marginTop={1}>
-        <Text dimColor>
-          Press {chalk.bold('q')} to exit
-        </Text>
+        <Text dimColor>Press {chalk.bold("q")} to exit</Text>
       </Box>
     </Box>
   );

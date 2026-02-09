@@ -1,4 +1,4 @@
-name: Biome check
+name: Lint
 
 on:
   push:
@@ -7,103 +7,24 @@ on:
   pull_request:
 
 jobs:
-  detect-changes:
-    runs-on: ubuntu-latest
-    outputs:
-      changed-dirs: ${{ steps.get-changed.outputs.dirs }}
-    steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-        with:
-          fetch-depth: 0
-      
-      - name: Get changed directories
-        id: get-changed
-        run: |
-          # Debug info
-          echo "Event name: ${{ github.event_name }}"
-          echo "github.event.before: ${{ github.event.before }}"
-          echo "github.sha: ${{ github.sha }}"
-          echo "github.base_ref: ${{ github.base_ref }}"
-          echo "github.ref: ${{ github.ref }}"
-          
-          # Define all directories to check
-          DIRS=(
-            "checkinclude"
-            "examplpe-remix-spa"
-            "html2svg"
-            "playwright-component-test"
-            "regexp"
-            "sample-budoux"
-            "sample-datefns"
-            "sample-honox"
-            "sample-neverthrow"
-            "sample-textlint"
-            "statemachine"
-            "vitest-in-source-example"
-            "playwrightsample/test"
-            "playwrightsample/web"
-          )
-          
-          # Get changed files based on event type
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "Using PR comparison: origin/${{ github.base_ref }}...HEAD"
-            CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
-          else
-            echo "Using push event comparison"
-            # Try different methods and log which one works
-            if git diff --name-only ${{ github.event.before }} ${{ github.sha }} 2>/dev/null; then
-              echo "Method 1: Using github.event.before"
-              CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
-            elif git diff --name-only origin/main...HEAD 2>/dev/null; then
-              echo "Method 2: Using origin/main...HEAD"
-              CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
-            else
-              echo "Method 3: Using all files"
-              CHANGED_FILES=$(git ls-tree -r --name-only HEAD)
-            fi
-          fi
-          
-          echo "=== Changed files ==="
-          echo "$CHANGED_FILES"
-          echo "===================="
-          
-          # Check which directories have changes
-          CHANGED_DIRS="[]"
-          for dir in "${DIRS[@]}"; do
-            if echo "$CHANGED_FILES" | grep -q "^$dir/"; then
-              echo "Found changes in: $dir"
-              CHANGED_DIRS=$(echo "$CHANGED_DIRS" | jq -c ". + [\"$dir\"]")
-            fi
-          done
-          
-          echo "Changed directories: $CHANGED_DIRS"
-          echo "dirs=$CHANGED_DIRS" >> $GITHUB_OUTPUT
-
   check:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.changed-dirs != '[]'
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      max-parallel: 3
-      matrix:
-        directory: ${{ fromJson(needs.detect-changes.outputs.changed-dirs) }}
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-      
+
       - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
         with:
           version: 10
-      
+
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 20
-      
-      - name: Install dependencies
-        working-directory: ${{ matrix.directory }}
-        run: pnpm install --frozen-lockfile
-      
-      - name: Run Biome check
-        working-directory: ${{ matrix.directory }}
-        run: pnpm biome check .
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: fmt check
+        run: pnpm run fmt:check
+
+      - name: lint
+        run: pnpm run lint

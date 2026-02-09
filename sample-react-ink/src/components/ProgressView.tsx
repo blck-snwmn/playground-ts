@@ -1,8 +1,8 @@
-import React from 'react';
-import { Box, Text } from 'ink';
-import Spinner from 'ink-spinner';
-import { ProgressBar } from '@inkjs/ui';
-import chalk from 'chalk';
+import React from "react";
+import { Box, Text } from "ink";
+import Spinner from "ink-spinner";
+import { ProgressBar } from "@inkjs/ui";
+import chalk from "chalk";
 
 interface ProgressViewProps {
   currentFile: string;
@@ -10,11 +10,7 @@ interface ProgressViewProps {
   total: number;
 }
 
-export const ProgressView: React.FC<ProgressViewProps> = ({
-  currentFile,
-  progress,
-  total,
-}) => {
+export const ProgressView: React.FC<ProgressViewProps> = ({ currentFile, progress, total }) => {
   const percentage = total > 0 ? (progress / total) * 100 : 0;
 
   return (

@@ -1,19 +1,19 @@
 {
-	"name": "statemachine",
-	"type": "module",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"@biomejs/biome": "2.2.5"
-	},
-	"dependencies": {
-		"xstate": "^5.10.0"
-	}
+  "name": "statemachine",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "xstate": "^5.10.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.5"
+  }
 }

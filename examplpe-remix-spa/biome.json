@@ -1,10 +1,10 @@
 {
-	"extends": ["../biome.json"],
-	"linter": {
-		"rules": {
-			"suspicious": {
-				"noUnknownAtRules": "off"
-			}
-		}
-	}
+  "extends": ["../biome.json"],
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noUnknownAtRules": "off"
+      }
+    }
+  }
 }

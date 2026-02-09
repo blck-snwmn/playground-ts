@@ -5,6 +5,7 @@ This project demonstrates Playwright Component Testing with React components.
 ## Setup
 
 Install dependencies:
+
 ```bash
 pnpm install
 ```
@@ -12,11 +13,13 @@ pnpm install
 ## Running Tests
 
 Run component tests:
+
 ```bash
 pnpm test-ct
 ```
 
 Run tests with UI mode:
+
 ```bash
 pnpm test-ct:ui
 ```
@@ -43,12 +46,16 @@ playwright-component-test/
 ## Components
 
 ### Counter Component
+
 A simple counter with increment, decrement, and reset functionality.
+
 - Props: `initialCount`, `onCountChange`
 - Features: State management, callback support
 
-### Button Component  
+### Button Component
+
 A reusable button component with variants and sizes.
+
 - Props: `children`, `onClick`, `disabled`, `variant`, `size`
 - Variants: primary, secondary, danger
 - Sizes: small, medium, large

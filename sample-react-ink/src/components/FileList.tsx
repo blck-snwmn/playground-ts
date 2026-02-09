@@ -1,11 +1,11 @@
-import React from 'react';
-import { Box, Text } from 'ink';
-import chalk from 'chalk';
+import React from "react";
+import { Box, Text } from "ink";
+import chalk from "chalk";
 
 export interface FileItem {
   name: string;
   size: string;
-  status: 'pending' | 'processing' | 'completed';
+  status: "pending" | "processing" | "completed";
 }
 
 interface FileListProps {
@@ -22,13 +22,12 @@ export const FileList: React.FC<FileListProps> = ({ files }) => {
         {files.map((file, index) => (
           <Box key={index} marginBottom={0}>
             <Text>
-              {file.status === 'completed' && chalk.green('✓ ')}
-              {file.status === 'processing' && chalk.yellow('⟳ ')}
-              {file.status === 'pending' && chalk.gray('○ ')}
-              {file.status === 'completed' && chalk.green(file.name)}
-              {file.status === 'processing' && chalk.yellow(file.name)}
-              {file.status === 'pending' && chalk.gray(file.name)}
-              {' '}
+              {file.status === "completed" && chalk.green("✓ ")}
+              {file.status === "processing" && chalk.yellow("⟳ ")}
+              {file.status === "pending" && chalk.gray("○ ")}
+              {file.status === "completed" && chalk.green(file.name)}
+              {file.status === "processing" && chalk.yellow(file.name)}
+              {file.status === "pending" && chalk.gray(file.name)}{" "}
               <Text dimColor>({file.size})</Text>
             </Text>
           </Box>

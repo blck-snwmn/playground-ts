@@ -19,7 +19,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -28,5 +28,5 @@ paths:
                 properties:
                   message:
                     type: string
-        '400':
+        "400":
           description: Bad Request

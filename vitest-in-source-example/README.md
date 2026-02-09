@@ -96,23 +96,24 @@ Tests are written directly in the source files using the `import.meta.vitest` pa
 
 ```typescript
 function add(a: number, b: number): number {
-    return a + b;
+  return a + b;
 }
 
 if (import.meta.vitest) {
-    const { describe, it, expect } = import.meta.vitest;
-    
-    describe('add', () => {
-        it('should add two numbers', () => {
-            expect(add(1, 2)).toBe(3);
-        });
+  const { describe, it, expect } = import.meta.vitest;
+
+  describe("add", () => {
+    it("should add two numbers", () => {
+      expect(add(1, 2)).toBe(3);
     });
+  });
 }
 ```
 
 ## Advanced Testing Patterns
 
 ### Async Testing
+
 ```typescript
 // Timer mocking
 vi.useFakeTimers();
@@ -126,29 +127,32 @@ await expect(failingFunction()).rejects.toThrow(ErrorType);
 ```
 
 ### Mocking
+
 ```typescript
 // Interface mocking
 const mockService = {
-    method: vi.fn().mockResolvedValue(result)
+  method: vi.fn().mockResolvedValue(result),
 };
 
 // Spy on existing methods
-const spy = vi.spyOn(object, 'method');
+const spy = vi.spyOn(object, "method");
 expect(spy).toHaveBeenCalledWith(args);
 ```
 
 ### Parameterized Tests
+
 ```typescript
 // Test multiple cases
 test.each([
-    { input: 'a', expected: 'A' },
-    { input: 'b', expected: 'B' }
-])('should convert $input to $expected', ({ input, expected }) => {
-    expect(convert(input)).toBe(expected);
+  { input: "a", expected: "A" },
+  { input: "b", expected: "B" },
+])("should convert $input to $expected", ({ input, expected }) => {
+  expect(convert(input)).toBe(expected);
 });
 ```
 
 ### Snapshot Testing
+
 ```typescript
 // Full object snapshots
 expect(complexObject).toMatchSnapshot();
@@ -189,16 +193,16 @@ pnpm test:coverage:ui
 ```
  % Coverage report from v8
 ------------|---------|----------|---------|---------|-------------------
-File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 ------------|---------|----------|---------|---------|-------------------
-All files   |     100 |      100 |     100 |     100 |                   
- greeter.ts |     100 |      100 |     100 |     100 |                   
- math.ts    |     100 |      100 |     100 |     100 |                   
- async-utils.ts    |     100 |      100 |     100 |     100 |                   
- mock-examples.ts  |     100 |      100 |     100 |     100 |                   
- parameterized-tests.ts |     100 |      100 |     100 |     100 |                   
- custom-matchers.ts     |     100 |      100 |     100 |     100 |                   
+All files   |     100 |      100 |     100 |     100 |
+ greeter.ts |     100 |      100 |     100 |     100 |
+ math.ts    |     100 |      100 |     100 |     100 |
+ async-utils.ts    |     100 |      100 |     100 |     100 |
+ mock-examples.ts  |     100 |      100 |     100 |     100 |
+ parameterized-tests.ts |     100 |      100 |     100 |     100 |
+ custom-matchers.ts     |     100 |      100 |     100 |     100 |
 ------------|---------|----------|---------|---------|-------------------
 ```
 
-This project serves as a comprehensive reference for various Vitest testing patterns and best practices! 
+This project serves as a comprehensive reference for various Vitest testing patterns and best practices!
