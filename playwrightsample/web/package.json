@@ -3,8 +3,8 @@
 		"dev": "tsx watch src/index.tsx"
 	},
 	"dependencies": {
-		"@hono/node-server": "^1.10.1",
-		"hono": "^4.6.5"
+		"@hono/node-server": "^1.19.11",
+		"hono": "^4.12.7"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.7",
