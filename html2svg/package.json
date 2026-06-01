@@ -12,7 +12,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.2.7",
 		"@types/node": "20.19.41",
-		"tsx": "4.20.5"
+		"tsx": "4.20.6"
 	},
 	"dependencies": {
 		"react": "^18.3.1",
