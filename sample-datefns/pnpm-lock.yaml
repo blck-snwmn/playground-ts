@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@date-fns/tz':
         specifier: ^1.0.2
-        version: 1.4.1
+        version: 1.5.0
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -81,8 +81,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@date-fns/tz@1.4.1':
-    resolution: {integrity: sha512-P5LUNhtbj6YfI3iJjw5EL9eUAG6OitD0W3fWQcpQjDRc/QIsL0tRNuO1PcDvPccWL1fSTXXdE1ds+l95DV/OFA==}
+  '@date-fns/tz@1.5.0':
+    resolution: {integrity: sha512-lwYN/vDPeNRULcepoE/LO2Pgx+7/RV+S9ARfbc9lr2DtGkOD7pAiruHvbR1RX3Qyf6ja47EWJDMsNK5vK08DJg==}
 
   '@esbuild/aix-ppc64@0.25.9':
     resolution: {integrity: sha512-OaGtL73Jck6pBKjNIe24BnFE6agGl+6KxDtTfHhy1HmhthfKouEcOhqpSL64K4/0WCtbKFLOdzD/44cJ4k9opA==}
@@ -301,7 +301,7 @@ snapshots:
   '@biomejs/cli-win32-x64@2.2.7':
     optional: true
 
-  '@date-fns/tz@1.4.1': {}
+  '@date-fns/tz@1.5.0': {}
 
   '@esbuild/aix-ppc64@0.25.9':
     optional: true
