@@ -4,7 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "oxlint --deny-warnings .",
+		"lint:fix": "oxlint --deny-warnings . --fix",
+		"fmt": "oxfmt --write $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')",
+		"fmt:check": "oxfmt --check $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')"
 	},
 	"keywords": [],
 	"author": "",
@@ -13,7 +17,9 @@
 		"budoux": "^0.7.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.7",
-		"tsx": "4.20.6"
+		"tsx": "4.20.6",
+		"oxfmt": "^0.48.0",
+		"oxlint": "^1.63.0",
+		"oxlint-tsgolint": "^0.22.1"
 	}
 }

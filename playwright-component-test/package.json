@@ -5,10 +5,13 @@
 	"private": true,
 	"scripts": {
 		"test-ct": "playwright test -c playwright-ct.config.ts",
-		"test-ct:ui": "playwright test -c playwright-ct.config.ts --ui"
+		"test-ct:ui": "playwright test -c playwright-ct.config.ts --ui",
+		"lint": "oxlint --deny-warnings .",
+		"lint:fix": "oxlint --deny-warnings . --fix",
+		"fmt": "oxfmt --write $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')",
+		"fmt:check": "oxfmt --check $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.7",
 		"@playwright/experimental-ct-react": "1.55.1",
 		"@playwright/test": "1.55.1",
 		"@types/react": "18.3.29",
@@ -16,6 +19,9 @@
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
 		"typescript": "5.9.3",
-		"vite": "7.3.3"
+		"vite": "7.3.3",
+		"oxfmt": "^0.48.0",
+		"oxlint": "^1.63.0",
+		"oxlint-tsgolint": "^0.22.1"
 	}
 }
