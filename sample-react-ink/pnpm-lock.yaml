@@ -10,26 +10,26 @@ importers:
     dependencies:
       '@inkjs/ui':
         specifier: ^2.0.0
-        version: 2.0.0(ink@6.3.1(@types/react@19.2.15)(react@19.2.6))
+        version: 2.0.0(ink@6.3.1(@types/react@19.2.17)(react@19.2.7))
       chalk:
         specifier: ^5.6.2
         version: 5.6.2
       ink:
         specifier: ^6.3.1
-        version: 6.3.1(@types/react@19.2.15)(react@19.2.6)
+        version: 6.3.1(@types/react@19.2.17)(react@19.2.7)
       ink-spinner:
         specifier: ^5.0.0
-        version: 5.0.0(ink@6.3.1(@types/react@19.2.15)(react@19.2.6))(react@19.2.6)
+        version: 5.0.0(ink@6.3.1(@types/react@19.2.17)(react@19.2.7))(react@19.2.7)
       react:
         specifier: ^19.2.0
-        version: 19.2.6
+        version: 19.2.7
     devDependencies:
       '@types/node':
         specifier: 24.9.2
         version: 24.9.2
       '@types/react':
-        specifier: 19.2.15
-        version: 19.2.15
+        specifier: 19.2.17
+        version: 19.2.17
       tsx:
         specifier: 4.20.6
         version: 4.20.6
@@ -208,8 +208,8 @@ packages:
   '@types/node@24.9.2':
     resolution: {integrity: sha512-uWN8YqxXxqFMX2RqGOrumsKeti4LlmIMIyV0lgut4jx7KQBcBiW6vkDtIBvHnHIquwNfJhk8v2OtmO8zXWHfPA==}
 
-  '@types/react@19.2.15':
-    resolution: {integrity: sha512-eRwcGNHve+E8qtEQSSRl6urh+rFop4v8gm6O8rGv25CodbvFdLjA1vVQ1KkiFE0w0UPOnb8tDiFKL5lp0rtY5Q==}
+  '@types/react@19.2.17':
+    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
 
   ansi-escapes@7.1.1:
     resolution: {integrity: sha512-Zhl0ErHcSRUaVfGUeUdDuLgpkEo8KIFjB4Y9uAc46ScOpdDiU1Dbyplh7qWJeJ/ZHpbyMSM26+X3BySgnIz40Q==}
@@ -360,8 +360,8 @@ packages:
     peerDependencies:
       react: ^19.1.0
 
-  react@19.2.6:
-    resolution: {integrity: sha512-sfWGGfavi0xr8Pg0sVsyHMAOziVYKgPLNrS7ig+ivMNb3wbCBw3KxtflsGBAwD3gYQlE/AEZsTLgToRrSCjb0Q==}
+  react@19.2.7:
+    resolution: {integrity: sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==}
     engines: {node: '>=0.10.0'}
 
   resolve-pkg-maps@1.0.0:
@@ -522,19 +522,19 @@ snapshots:
   '@esbuild/win32-x64@0.25.11':
     optional: true
 
-  '@inkjs/ui@2.0.0(ink@6.3.1(@types/react@19.2.15)(react@19.2.6))':
+  '@inkjs/ui@2.0.0(ink@6.3.1(@types/react@19.2.17)(react@19.2.7))':
     dependencies:
       chalk: 5.6.2
       cli-spinners: 3.3.0
       deepmerge: 4.3.1
       figures: 6.1.0
-      ink: 6.3.1(@types/react@19.2.15)(react@19.2.6)
+      ink: 6.3.1(@types/react@19.2.17)(react@19.2.7)
 
   '@types/node@24.9.2':
     dependencies:
       undici-types: 7.16.0
 
-  '@types/react@19.2.15':
+  '@types/react@19.2.17':
     dependencies:
       csstype: 3.2.3
 
@@ -627,13 +627,13 @@ snapshots:
 
   indent-string@5.0.0: {}
 
-  ink-spinner@5.0.0(ink@6.3.1(@types/react@19.2.15)(react@19.2.6))(react@19.2.6):
+  ink-spinner@5.0.0(ink@6.3.1(@types/react@19.2.17)(react@19.2.7))(react@19.2.7):
     dependencies:
       cli-spinners: 2.9.2
-      ink: 6.3.1(@types/react@19.2.15)(react@19.2.6)
-      react: 19.2.6
+      ink: 6.3.1(@types/react@19.2.17)(react@19.2.7)
+      react: 19.2.7
 
-  ink@6.3.1(@types/react@19.2.15)(react@19.2.6):
+  ink@6.3.1(@types/react@19.2.17)(react@19.2.7):
     dependencies:
       '@alcalzone/ansi-tokenize': 0.2.2
       ansi-escapes: 7.1.1
@@ -648,8 +648,8 @@ snapshots:
       indent-string: 5.0.0
       is-in-ci: 2.0.0
       patch-console: 2.0.0
-      react: 19.2.6
-      react-reconciler: 0.32.0(react@19.2.6)
+      react: 19.2.7
+      react-reconciler: 0.32.0(react@19.2.7)
       signal-exit: 3.0.7
       slice-ansi: 7.1.2
       stack-utils: 2.0.6
@@ -660,7 +660,7 @@ snapshots:
       ws: 8.18.3
       yoga-layout: 3.2.1
     optionalDependencies:
-      '@types/react': 19.2.15
+      '@types/react': 19.2.17
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -683,12 +683,12 @@ snapshots:
 
   patch-console@2.0.0: {}
 
-  react-reconciler@0.32.0(react@19.2.6):
+  react-reconciler@0.32.0(react@19.2.7):
     dependencies:
-      react: 19.2.6
+      react: 19.2.7
       scheduler: 0.26.0
 
-  react@19.2.6: {}
+  react@19.2.7: {}
 
   resolve-pkg-maps@1.0.0: {}
 
