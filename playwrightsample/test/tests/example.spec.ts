@@ -9,7 +9,7 @@ test("heading text", async ({ page }) => {
 test("list item", async ({ page }) => {
   await page.goto("http://localhost:3000/");
 
-  const items = await page.getByRole("listitem");
+  const items = page.getByRole("listitem");
   await expect(items).toHaveCount(3);
   await expect(items).toHaveText(["hello world!!", "hello hono!!", "hello jsx!!"]);
 });

@@ -80,7 +80,7 @@ const divide = (a: number, b: number): Result<number, string> => {
   return ok(a / b);
 };
 
-const parseJSON = fromThrowable(JSON.parse, (error) => `Failed to parse JSON: ${error}`);
+const parseJSON = fromThrowable(JSON.parse, (error) => `Failed to parse JSON: ${String(error)}`);
 
 const fetchData = async (url: string) => {
   const response = await fetch(url);
@@ -91,7 +91,7 @@ const fetchData = async (url: string) => {
 };
 
 const _safeFetch = (url: string) =>
-  fromPromise(fetchData(url), (error) => `Network error: ${error}`);
+  fromPromise(fetchData(url), (error) => `Network error: ${String(error)}`);
 
 const processUserData = async () => {
   console.log("=== neverthrow Sample ===\n");
@@ -196,4 +196,4 @@ const processUserData = async () => {
   );
 };
 
-processUserData().catch(console.error);
+void processUserData().catch(console.error);

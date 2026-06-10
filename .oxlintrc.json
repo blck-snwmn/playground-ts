@@ -1,24 +1,10 @@
 {
 	"$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
-	"plugins": ["typescript"],
-	"rules": {
-		"typescript/no-unused-vars": [
-			"error",
-			{
-				"argsIgnorePattern": "^_",
-				"varsIgnorePattern": "^_"
-			}
-		]
+	"options": {
+		"typeAware": true,
+		"typeCheck": true
 	},
-	"ignorePatterns": [
-		"node_modules",
-		"build",
-		"coverage",
-		"dist",
-		"test-results",
-		".cache",
-		"playwright/.cache",
-		"playwright-component-test/playwright/.cache",
-		"*.d.ts"
-	]
+	"rules": {
+		"no-non-null-assertion": "error"
+	}
 }

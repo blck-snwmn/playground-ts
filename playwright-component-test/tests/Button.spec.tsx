@@ -1,3 +1,5 @@
+// Playwright matchers are fluent APIs, but tsgolint reports them as unbound methods throughout this spec.
+/* eslint-disable typescript/unbound-method */
 import { expect, test } from "@playwright/experimental-ct-react";
 import { Button } from "../src/components/Button";
 

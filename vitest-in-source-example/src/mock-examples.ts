@@ -96,18 +96,29 @@ if (import.meta.vitest) {
       let userService: UserService;
       let mockDb: DatabaseService;
       let mockEmail: EmailService;
+      let findUser: ReturnType<typeof vi.fn<DatabaseService["findUser"]>>;
+      let saveUser: ReturnType<typeof vi.fn<DatabaseService["saveUser"]>>;
+      let deleteUser: ReturnType<typeof vi.fn<DatabaseService["deleteUser"]>>;
+      let sendEmail: ReturnType<typeof vi.fn<EmailService["sendEmail"]>>;
+      let validateEmail: ReturnType<typeof vi.fn<EmailService["validateEmail"]>>;
 
       beforeEach(() => {
+        findUser = vi.fn<DatabaseService["findUser"]>();
+        saveUser = vi.fn<DatabaseService["saveUser"]>();
+        deleteUser = vi.fn<DatabaseService["deleteUser"]>();
+        sendEmail = vi.fn<EmailService["sendEmail"]>();
+        validateEmail = vi.fn<EmailService["validateEmail"]>();
+
         // Create mock objects
         mockDb = {
-          findUser: vi.fn(),
-          saveUser: vi.fn(),
-          deleteUser: vi.fn(),
+          findUser,
+          saveUser,
+          deleteUser,
         };
 
         mockEmail = {
-          sendEmail: vi.fn(),
-          validateEmail: vi.fn(),
+          sendEmail,
+          validateEmail,
         };
 
         userService = new UserService(mockDb, mockEmail);
@@ -115,10 +126,10 @@ if (import.meta.vitest) {
 
       it("should create user successfully", async () => {
         // Setup mocks
-        vi.mocked(mockEmail.validateEmail).mockReturnValue(true);
-        vi.mocked(mockDb.findUser).mockResolvedValue(null);
-        vi.mocked(mockDb.saveUser).mockResolvedValue();
-        vi.mocked(mockEmail.sendEmail).mockResolvedValue(true);
+        validateEmail.mockReturnValue(true);
+        findUser.mockResolvedValue(null);
+        saveUser.mockResolvedValue();
+        sendEmail.mockResolvedValue(true);
 
         const result = await userService.createUser("1", "Miko", "miko@example.com");
 
@@ -126,10 +137,10 @@ if (import.meta.vitest) {
         expect(result.message).toBe("User created and welcome email sent");
 
         // Verify mock calls
-        expect(mockEmail.validateEmail).toHaveBeenCalledWith("miko@example.com");
-        expect(mockDb.findUser).toHaveBeenCalledWith("1");
-        expect(mockDb.saveUser).toHaveBeenCalledWith({ id: "1", name: "Miko" });
-        expect(mockEmail.sendEmail).toHaveBeenCalledWith(
+        expect(validateEmail).toHaveBeenCalledWith("miko@example.com");
+        expect(findUser).toHaveBeenCalledWith("1");
+        expect(saveUser).toHaveBeenCalledWith({ id: "1", name: "Miko" });
+        expect(sendEmail).toHaveBeenCalledWith(
           "miko@example.com",
           "Welcome!",
           "Hello Miko, welcome to our service!",
@@ -137,7 +148,7 @@ if (import.meta.vitest) {
       });
 
       it("should fail with invalid email", async () => {
-        vi.mocked(mockEmail.validateEmail).mockReturnValue(false);
+        validateEmail.mockReturnValue(false);
 
         const result = await userService.createUser("1", "Miko", "invalid-email");
 
@@ -145,13 +156,13 @@ if (import.meta.vitest) {
         expect(result.message).toBe("Invalid email address");
 
         // Verify that other methods were not called
-        expect(mockDb.findUser).not.toHaveBeenCalled();
-        expect(mockDb.saveUser).not.toHaveBeenCalled();
+        expect(findUser).not.toHaveBeenCalled();
+        expect(saveUser).not.toHaveBeenCalled();
       });
 
       it("should fail when user already exists", async () => {
-        vi.mocked(mockEmail.validateEmail).mockReturnValue(true);
-        vi.mocked(mockDb.findUser).mockResolvedValue({
+        validateEmail.mockReturnValue(true);
+        findUser.mockResolvedValue({
           id: "1",
           name: "Existing User",
         });
@@ -160,14 +171,14 @@ if (import.meta.vitest) {
 
         expect(result.success).toBe(false);
         expect(result.message).toBe("User already exists");
-        expect(mockDb.saveUser).not.toHaveBeenCalled();
+        expect(saveUser).not.toHaveBeenCalled();
       });
 
       it("should handle email sending failure", async () => {
-        vi.mocked(mockEmail.validateEmail).mockReturnValue(true);
-        vi.mocked(mockDb.findUser).mockResolvedValue(null);
-        vi.mocked(mockDb.saveUser).mockResolvedValue();
-        vi.mocked(mockEmail.sendEmail).mockResolvedValue(false);
+        validateEmail.mockReturnValue(true);
+        findUser.mockResolvedValue(null);
+        saveUser.mockResolvedValue();
+        sendEmail.mockResolvedValue(false);
 
         const result = await userService.createUser("1", "Miko", "miko@example.com");
 
@@ -176,23 +187,23 @@ if (import.meta.vitest) {
       });
 
       it("should remove user successfully", async () => {
-        vi.mocked(mockDb.findUser).mockResolvedValue({ id: "1", name: "Miko" });
-        vi.mocked(mockDb.deleteUser).mockResolvedValue(true);
+        findUser.mockResolvedValue({ id: "1", name: "Miko" });
+        deleteUser.mockResolvedValue(true);
 
         const result = await userService.removeUser("1");
 
         expect(result).toBe(true);
-        expect(mockDb.findUser).toHaveBeenCalledWith("1");
-        expect(mockDb.deleteUser).toHaveBeenCalledWith("1");
+        expect(findUser).toHaveBeenCalledWith("1");
+        expect(deleteUser).toHaveBeenCalledWith("1");
       });
 
       it("should fail to remove non-existent user", async () => {
-        vi.mocked(mockDb.findUser).mockResolvedValue(null);
+        findUser.mockResolvedValue(null);
 
         const result = await userService.removeUser("999");
 
         expect(result).toBe(false);
-        expect(mockDb.deleteUser).not.toHaveBeenCalled();
+        expect(deleteUser).not.toHaveBeenCalled();
       });
     });
 

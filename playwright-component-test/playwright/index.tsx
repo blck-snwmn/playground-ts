@@ -3,3 +3,4 @@
 
 // Example: import global CSS
 // import './global.css';
+export {};

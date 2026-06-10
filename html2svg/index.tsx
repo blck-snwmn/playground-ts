@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import satori from "satori";
 
-(async () => {
+void (async () => {
   // const fontData = fs.readFileSync("./font/NotoSansJP-Thin.ttf");
   const xx = await fetch("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700");
   if (!xx.ok) {
@@ -28,7 +28,7 @@ import satori from "satori";
         // フォント
         {
           name: "Roboto",
-          data: await fontData,
+          data: fontData,
           weight: 400,
           style: "normal",
         },

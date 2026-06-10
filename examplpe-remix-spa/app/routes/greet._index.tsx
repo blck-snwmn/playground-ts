@@ -7,7 +7,7 @@ import { Label } from "~/components/ui/label";
 export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
   const data = await request.formData();
   const name = data.get("name");
-  if (!name) {
+  if (typeof name !== "string" || !name) {
     return { error: "Name is required" };
   }
   return redirect(`/greet/${name}`);
