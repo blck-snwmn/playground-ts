@@ -18,7 +18,7 @@
 	},
 	"devDependencies": {
 		"tsx": "4.20.6",
-		"oxfmt": "0.48.0",
+		"oxfmt": "0.54.0",
 		"oxlint": "1.68.0",
 		"oxlint-tsgolint": "0.22.1"
 	}
