@@ -19,7 +19,7 @@
 		"tsx": "4.20.6",
 		"oxfmt": "0.54.0",
 		"oxlint": "1.68.0",
-		"oxlint-tsgolint": "0.22.1"
+		"oxlint-tsgolint": "0.23.0"
 	},
 	"dependencies": {
 		"react": "^18.3.1",

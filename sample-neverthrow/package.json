@@ -18,7 +18,7 @@
 		"typescript": "5.9.3",
 		"oxfmt": "0.54.0",
 		"oxlint": "1.68.0",
-		"oxlint-tsgolint": "0.22.1"
+		"oxlint-tsgolint": "0.23.0"
 	},
 	"dependencies": {
 		"neverthrow": "^8.2.0"
