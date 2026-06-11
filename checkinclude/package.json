@@ -14,9 +14,9 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"oxfmt": "^0.48.0",
-		"oxlint": "^1.63.0",
-		"oxlint-tsgolint": "^0.22.1",
+		"oxfmt": "0.48.0",
+		"oxlint": "1.68.0",
+		"oxlint-tsgolint": "0.22.1",
 		"tsx": "4.20.6"
 	}
 }
