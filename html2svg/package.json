@@ -18,7 +18,7 @@
 		"@types/node": "20.19.42",
 		"tsx": "4.20.6",
 		"oxfmt": "0.54.0",
-		"oxlint": "1.68.0",
+		"oxlint": "1.69.0",
 		"oxlint-tsgolint": "0.23.0"
 	},
 	"dependencies": {
