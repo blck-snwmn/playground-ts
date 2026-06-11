@@ -1,13 +1,19 @@
 {
 	"scripts": {
-		"dev": "tsx watch src/index.tsx"
+		"dev": "tsx watch src/index.tsx",
+		"lint": "oxlint --deny-warnings .",
+		"lint:fix": "oxlint --deny-warnings . --fix",
+		"fmt": "oxfmt --write $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')",
+		"fmt:check": "oxfmt --check $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')"
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.10.1",
 		"hono": "^4.6.5"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.7",
-		"tsx": "4.20.6"
+		"tsx": "4.20.6",
+		"oxfmt": "^0.48.0",
+		"oxlint": "^1.63.0",
+		"oxlint-tsgolint": "^0.22.1"
 	}
 }

@@ -1,4 +1,4 @@
-name: Biome check
+name: OXC check
 
 on:
   push:
@@ -115,6 +115,10 @@ jobs:
         working-directory: ${{ matrix.directory }}
         run: pnpm install --frozen-lockfile
 
-      - name: Run Biome check
+      - name: Run lint
         working-directory: ${{ matrix.directory }}
-        run: pnpm biome check .
+        run: pnpm run lint
+
+      - name: Check format
+        working-directory: ${{ matrix.directory }}
+        run: pnpm run fmt:check

@@ -5,7 +5,11 @@
 		"dev": "vite",
 		"build": "vite build --mode client && vite build",
 		"preview": "wrangler pages dev ./dist",
-		"deploy": "$npm_execpath run build && wrangler pages deploy ./dist"
+		"deploy": "$npm_execpath run build && wrangler pages deploy ./dist",
+		"lint": "oxlint --deny-warnings .",
+		"lint:fix": "oxlint --deny-warnings . --fix",
+		"fmt": "oxfmt --write $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')",
+		"fmt:check": "oxfmt --check $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')"
 	},
 	"private": true,
 	"dependencies": {
@@ -13,10 +17,12 @@
 		"honox": "^0.1.11"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.7",
 		"@cloudflare/workers-types": "4.20260607.1",
 		"@hono/vite-cloudflare-pages": "0.4.3",
 		"vite": "7.3.5",
-		"wrangler": "3.114.17"
+		"wrangler": "3.114.17",
+		"oxfmt": "^0.48.0",
+		"oxlint": "^1.63.0",
+		"oxlint-tsgolint": "^0.22.1"
 	}
 }
