@@ -15,7 +15,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@textlint/kernel": "15.2.3",
+		"@textlint/kernel": "15.7.1",
 		"@textlint/module-interop": "15.7.1",
 		"@types/node": "22.19.20",
 		"textlint": "15.2.3",
