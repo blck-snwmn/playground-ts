@@ -12,8 +12,8 @@
 		"fmt:check": "oxfmt --check $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')"
 	},
 	"devDependencies": {
-		"@playwright/experimental-ct-react": "1.55.1",
-		"@playwright/test": "1.55.1",
+		"@playwright/experimental-ct-react": "1.60.0",
+		"@playwright/test": "1.60.0",
 		"@types/node": "20.19.42",
 		"@types/react": "18.3.31",
 		"@types/react-dom": "18.3.7",
