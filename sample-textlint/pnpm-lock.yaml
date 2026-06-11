@@ -12,8 +12,8 @@ importers:
         specifier: 15.2.3
         version: 15.2.3
       '@textlint/module-interop':
-        specifier: 15.2.3
-        version: 15.2.3
+        specifier: 15.7.1
+        version: 15.7.1
       '@types/node':
         specifier: 22.19.20
         version: 22.19.20
@@ -538,6 +538,9 @@ packages:
 
   '@textlint/module-interop@15.2.3':
     resolution: {integrity: sha512-dV6M3ptOFJjR5bgYUMeVqc8AqFrMtCEFaZEiLAfMufX29asYonI2K8arqivOA69S2Lh6esyij6V7qpQiXeK/cA==}
+
+  '@textlint/module-interop@15.7.1':
+    resolution: {integrity: sha512-Jg+sQW2L/cRJypk59wtcMUVVpt8vmit5ZMT3gUnFwevP3A6Qp1HfOtUy9ObT4hBX3lOSGT/ekcCDxR1pL7uH1g==}
 
   '@textlint/resolver@15.2.3':
     resolution: {integrity: sha512-Qd3udqo2sWa3u0sYgDVd9M/iybBVBJLrWGaID6Yzl9GyhdGi0E6ngo3b9r+H6psbJDIaCKi54IxvC9q5didWfA==}
@@ -1829,6 +1832,8 @@ snapshots:
       - supports-color
 
   '@textlint/module-interop@15.2.3': {}
+
+  '@textlint/module-interop@15.7.1': {}
 
   '@textlint/resolver@15.2.3': {}
 
