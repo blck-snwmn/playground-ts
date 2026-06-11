@@ -10,7 +10,7 @@ importers:
     dependencies:
       xstate:
         specifier: ^5.10.0
-        version: 5.20.2
+        version: 5.32.0
     devDependencies:
       oxfmt:
         specifier: 0.54.0
@@ -332,8 +332,8 @@ packages:
     resolution: {integrity: sha512-Pugqs6M0m7Lv1I7FtxN4aoyToKg1C4tu+/381vH35y8oENM/Ai7f7C4StcoK4/+BSw9ebcS8jRiVrORFKCALLw==}
     engines: {node: ^20.0.0 || >=22.0.0}
 
-  xstate@5.20.2:
-    resolution: {integrity: sha512-GZmLmc+WPKfFRxuTDAxCg0cUhS/ZnWaRD86DO8MKizeK4a050jd5k7UNnIQ2jJDWRig2/r0tmVXeezUNIhoz5Q==}
+  xstate@5.32.0:
+    resolution: {integrity: sha512-zsk73aWGmxn9z34P0kbiod5JwTvdYRW3+IDxITq8sd9+VWwMyW7BUzpplnYy9mIEXa6V8IMDv7Hy4m0mhT5+2Q==}
 
 snapshots:
 
@@ -527,4 +527,4 @@ snapshots:
 
   tinypool@2.1.0: {}
 
-  xstate@5.20.2: {}
+  xstate@5.32.0: {}
