@@ -13,8 +13,8 @@ importers:
         version: 8.2.0
     devDependencies:
       '@types/node':
-        specifier: 22.18.13
-        version: 22.18.13
+        specifier: 22.19.20
+        version: 22.19.20
       oxfmt:
         specifier: 0.48.0
         version: 0.48.0
@@ -469,8 +469,8 @@ packages:
     os: [linux]
     libc: [glibc]
 
-  '@types/node@22.18.13':
-    resolution: {integrity: sha512-Bo45YKIjnmFtv6I1TuC8AaHBbqXtIo+Om5fE4QiU1Tj8QR/qt+8O3BAtOimG5IFmwaWiPmB3Mv3jtYzBA4Us2A==}
+  '@types/node@22.19.20':
+    resolution: {integrity: sha512-6tELRwSDYWW9EdZhbeZmYGZ1/7Djkt+Ah3/ScEYT9cDord7UJzasR/4D3VONg9tQI5CDp+/CZC1AXj2pCFOvpw==}
 
   esbuild@0.25.9:
     resolution: {integrity: sha512-CRbODhYyQx3qp7ZEwzxOk4JBqmD/seJrzPa/cGjY1VtIn5E09Oi9/dB4JwctnfZ8Q8iT7rioVv5k/FNT/uf54g==}
@@ -746,7 +746,7 @@ snapshots:
   '@rollup/rollup-linux-x64-gnu@4.48.1':
     optional: true
 
-  '@types/node@22.18.13':
+  '@types/node@22.19.20':
     dependencies:
       undici-types: 6.21.0
 
