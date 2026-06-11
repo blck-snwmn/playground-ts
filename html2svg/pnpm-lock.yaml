@@ -12,8 +12,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1
       satori:
-        specifier: ^0.16.2
-        version: 0.16.2
+        specifier: ^0.26.0
+        version: 0.26.0
     devDependencies:
       '@types/node':
         specifier: 20.19.42
@@ -593,8 +593,8 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
-  satori@0.16.2:
-    resolution: {integrity: sha512-tORnR2UZ1cB9N81WDjx5ZC4ToPmkybnJWyR8N1OC/z+5kWZcG1mcLssJ5WLNBj1lNr2igIFW0bIiugCxRKL/jQ==}
+  satori@0.26.0:
+    resolution: {integrity: sha512-tkMFrfIs3l2mQ2JEcyW0ADTy3zGggFRFzi6Ef8YozQSFsFKEqaSO1Y8F9wJg4//PJGQauMalHGTUEkPrFwhVPA==}
     engines: {node: '>=16'}
 
   string.prototype.codepointat@0.2.1:
@@ -997,7 +997,7 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
-  satori@0.16.2:
+  satori@0.26.0:
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
       css-background-parser: 0.1.0
