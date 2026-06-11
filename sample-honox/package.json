@@ -21,8 +21,8 @@
 		"@hono/vite-cloudflare-pages": "0.4.3",
 		"vite": "7.3.5",
 		"wrangler": "3.114.17",
-		"oxfmt": "^0.48.0",
-		"oxlint": "^1.63.0",
-		"oxlint-tsgolint": "^0.22.1"
+		"oxfmt": "0.48.0",
+		"oxlint": "1.68.0",
+		"oxlint-tsgolint": "0.22.1"
 	}
 }
