@@ -7,7 +7,7 @@
 		"fmt:check": "oxfmt --check $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')"
 	},
 	"dependencies": {
-		"@hono/node-server": "^1.10.1",
+		"@hono/node-server": "^2.0.0",
 		"hono": "^4.6.5"
 	},
 	"devDependencies": {
