@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       react:
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^19.0.0
+        version: 19.2.7
       satori:
         specifier: ^0.26.0
         version: 0.26.0
@@ -19,8 +19,8 @@ importers:
         specifier: 24.13.1
         version: 24.13.1
       '@types/react':
-        specifier: 18.3.31
-        version: 18.3.31
+        specifier: 19.2.17
+        version: 19.2.17
       oxfmt:
         specifier: 0.54.0
         version: 0.54.0
@@ -474,11 +474,8 @@ packages:
   '@types/node@24.13.1':
     resolution: {integrity: sha512-RSpUJGmvsJ1ZeBehQZFhIdpsz+bIpES0nIQXko4Ybq+N+kX6XvOq3Jo+iJ82FWLdblFq85AsMikd3m35jgezYg==}
 
-  '@types/prop-types@15.7.15':
-    resolution: {integrity: sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==}
-
-  '@types/react@18.3.31':
-    resolution: {integrity: sha512-vfEqpXTvwT91yhmwdfouStN2hSKwTvyRs8qpLfADyrq/kxDw0hZM7Wk9Ug1FELj8hIby+S/+kQCSRFF32nv2Qw==}
+  '@types/react@19.2.17':
+    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
 
   base64-js@0.0.8:
     resolution: {integrity: sha512-3XSA2cR/h/73EzlXXdU6YNycmYI7+kicTxks4eJg2g39biHR84slg2+des+p7iHYhbRg/udIS4TD53WabcOUkw==}
@@ -534,15 +531,8 @@ packages:
     resolution: {integrity: sha512-Ox1pJVrDCyGHMG9CFg1tmrRUMRPRsAWYc/PinY0XzJU4K7y7vjNoLKIQ7BR5UJMCxNN8EM1MNDmHWA/B3aZUuw==}
     engines: {node: '>=6'}
 
-  js-tokens@4.0.0:
-    resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-
   linebreak@1.1.0:
     resolution: {integrity: sha512-MHp03UImeVhB7XZtjd0E4n6+3xr5Dq/9xI/5FptGk5FrbDR3zagPa2DS6U8ks/3HjbKWG9Q1M2ufOzxV2qLYSQ==}
-
-  loose-envify@1.4.0:
-    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
-    hasBin: true
 
   oxfmt@0.54.0:
     resolution: {integrity: sha512-DjnMwn7smSLF+Mc2+pRItnuPftm/dkUFpY/d4+33y9TfKrsHZo8GLhmUg9BrOIUEy94Rlom1Q11N6vuhE+e0oQ==}
@@ -583,8 +573,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  react@18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
+  react@19.2.7:
+    resolution: {integrity: sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==}
     engines: {node: '>=0.10.0'}
 
   satori@0.26.0:
@@ -836,11 +826,8 @@ snapshots:
     dependencies:
       undici-types: 7.18.2
 
-  '@types/prop-types@15.7.15': {}
-
-  '@types/react@18.3.31':
+  '@types/react@19.2.17':
     dependencies:
-      '@types/prop-types': 15.7.15
       csstype: 3.2.3
 
   base64-js@0.0.8: {}
@@ -905,16 +892,10 @@ snapshots:
 
   hex-rgb@4.3.0: {}
 
-  js-tokens@4.0.0: {}
-
   linebreak@1.1.0:
     dependencies:
       base64-js: 0.0.8
       unicode-trie: 2.0.0
-
-  loose-envify@1.4.0:
-    dependencies:
-      js-tokens: 4.0.0
 
   oxfmt@0.54.0:
     dependencies:
@@ -981,9 +962,7 @@ snapshots:
 
   postcss-value-parser@4.2.0: {}
 
-  react@18.3.1:
-    dependencies:
-      loose-envify: 1.4.0
+  react@19.2.7: {}
 
   satori@0.26.0:
     dependencies:
