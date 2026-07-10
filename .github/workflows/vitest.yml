@@ -13,6 +13,7 @@ jobs:
 
     strategy:
       matrix:
+        # Keep versions here because this job intentionally tests multiple Node.js releases.
         node-version: [20.x, 22.x]
 
     steps:
@@ -29,7 +30,7 @@ jobs:
     - name: Setup pnpm
       uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
       with:
-        version: 8
+        package_json_file: vitest-in-source-example/package.json
         run_install: false
 
     - name: Install dependencies
