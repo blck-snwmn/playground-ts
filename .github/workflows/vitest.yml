@@ -30,7 +30,8 @@ jobs:
     - name: Setup pnpm
       uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
       with:
-        package_json_file: vitest-in-source-example/package.json
+        # Preserve this sample's existing pnpm 8 compatibility independently of the root CI toolchain.
+        version: 8
         run_install: false
 
     - name: Install dependencies

@@ -1,7 +1,6 @@
 {
 	"name": "vitest-in-source-example",
 	"version": "1.0.0",
-	"packageManager": "pnpm@8.15.9",
 	"description": "",
 	"type": "module",
 	"main": "index.js",
