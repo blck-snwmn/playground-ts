@@ -27,6 +27,7 @@ jobs:
       with:
         # Preserve this sample's existing pnpm 8 compatibility independently of the root CI toolchain.
         version: 8
+        package_json_file: playwrightsample/test/package.json
         run_install: false
     - name: Install dependencies
       run: pnpm install

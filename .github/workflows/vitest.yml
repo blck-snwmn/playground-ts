@@ -32,6 +32,7 @@ jobs:
       with:
         # Preserve this sample's existing pnpm 8 compatibility independently of the root CI toolchain.
         version: 8
+        package_json_file: vitest-in-source-example/package.json
         run_install: false
 
     - name: Install dependencies
