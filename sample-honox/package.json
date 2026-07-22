@@ -19,10 +19,10 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20260610.1",
 		"@hono/vite-cloudflare-pages": "0.4.3",
-		"vite": "8.0.16",
-		"wrangler": "4.99.0",
 		"oxfmt": "0.54.0",
-		"oxlint": "1.69.0",
-		"oxlint-tsgolint": "0.23.0"
+		"oxlint": "1.75.0",
+		"oxlint-tsgolint": "7.0.2001",
+		"vite": "8.0.16",
+		"wrangler": "4.99.0"
 	}
 }

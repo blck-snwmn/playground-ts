@@ -16,8 +16,8 @@
 	"license": "ISC",
 	"devDependencies": {
 		"oxfmt": "0.54.0",
-		"oxlint": "1.69.0",
-		"oxlint-tsgolint": "0.23.0"
+		"oxlint": "1.75.0",
+		"oxlint-tsgolint": "7.0.2001"
 	},
 	"dependencies": {
 		"xstate": "^5.10.0"
