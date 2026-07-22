@@ -16,7 +16,7 @@
 		"@playwright/test": "^1.52.0",
 		"@types/node": "^22.17.1",
 		"oxfmt": "^0.48.0",
-		"oxlint": "^1.63.0",
-		"oxlint-tsgolint": "^0.22.1"
+		"oxlint": "^1.75.0",
+		"oxlint-tsgolint": "^7.0.2001"
 	}
 }

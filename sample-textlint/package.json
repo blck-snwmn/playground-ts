@@ -18,11 +18,11 @@
 		"@textlint/kernel": "15.2.3",
 		"@textlint/module-interop": "15.7.1",
 		"@types/node": "24.13.1",
+		"oxfmt": "0.54.0",
+		"oxlint": "1.75.0",
+		"oxlint-tsgolint": "7.0.2001",
 		"textlint": "15.2.3",
 		"textlint-rule-no-todo": "2.0.1",
-		"tsx": "4.22.4",
-		"oxfmt": "0.54.0",
-		"oxlint": "1.69.0",
-		"oxlint-tsgolint": "0.23.0"
+		"tsx": "4.22.4"
 	}
 }
