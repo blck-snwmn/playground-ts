@@ -1,4 +1,4 @@
 # Run
 ```bash
-$ npx @redocly/cli lint openapi.yaml
+$ bunx @redocly/cli lint openapi.yaml
 ```

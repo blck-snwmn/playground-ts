@@ -5,12 +5,12 @@ Comparison between `tsx` and Node.js native TypeScript execution.
 ## Prerequisites
 
 - Node.js v25.2.0 or later
-- pnpm
+- Bun
 
 ## Installation
 
 ```bash
-pnpm install
+bun install
 ```
 
 ## Run
@@ -18,13 +18,13 @@ pnpm install
 ### `work-both.ts` - Works with both
 
 ```bash
-tsx work-both.ts
+bunx tsx work-both.ts
 node work-both.ts
 ```
 
 ### `work-tsx.ts` - Works with tsx only
 
 ```bash
-tsx work-tsx.ts
+bunx tsx work-tsx.ts
 node work-tsx.ts  # Error: TypeScript enum is not supported in strip-only mode
 ```

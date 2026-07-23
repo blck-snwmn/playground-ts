@@ -14,16 +14,16 @@ This project demonstrates how to set up Vitest with in-source testing and compre
 ## Installation
 
 ```bash
-pnpm install
+bun install
 ```
 
 ## Scripts
 
-- `pnpm test` - Run tests in watch mode
-- `pnpm test:run` - Run tests once and exit
-- `pnpm test:coverage` - Run tests with coverage (once and exit)
-- `pnpm test:coverage:ui` - Run tests with coverage and open UI
-- `pnpm test:coverage:watch` - Run tests with coverage in watch mode
+- `bun run test` - Run tests in watch mode
+- `bun run test:run` - Run tests once and exit
+- `bun run test:coverage` - Run tests with coverage (once and exit)
+- `bun run test:coverage:ui` - Run tests with coverage and open UI
+- `bun run test:coverage:watch` - Run tests with coverage in watch mode
 
 ## Coverage Configuration
 
@@ -37,7 +37,7 @@ The coverage is configured in `vite.config.mjs` with:
 
 ## Coverage Reports
 
-After running `pnpm test:coverage`, you'll find:
+After running `bun run test:coverage`, you'll find:
 
 - **Console output**: Immediate feedback in terminal
 - **HTML report**: Open `coverage/index.html` in your browser for detailed visual report
@@ -172,16 +172,16 @@ You can adjust these thresholds in `vite.config.mjs`.
 
 ```bash
 # Run all tests
-pnpm test:run
+bun run test:run
 
 # Run with coverage
-pnpm test:coverage
+bun run test:coverage
 
 # Watch mode for development
-pnpm test
+bun run test
 
 # Coverage with UI
-pnpm test:coverage:ui
+bun run test:coverage:ui
 ```
 
 ## Example Output
@@ -201,4 +201,4 @@ All files   |     100 |      100 |     100 |     100 |
 ------------|---------|----------|---------|---------|-------------------
 ```
 
-This project serves as a comprehensive reference for various Vitest testing patterns and best practices! 
+This project serves as a comprehensive reference for various Vitest testing patterns and best practices!
