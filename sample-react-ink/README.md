@@ -17,17 +17,17 @@ A CLI app that simulates file processing.
 ### Install
 
 ```bash
-pnpm install
+bun install
 ```
 
 ### Run
 
 ```bash
-pnpm start
+bun run start
 ```
 
 ### Build
 
 ```bash
-pnpm build
+bun run build
 ```

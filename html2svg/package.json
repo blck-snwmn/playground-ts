@@ -18,8 +18,7 @@
 		"@types/react": "19.2.17",
 		"oxfmt": "0.54.0",
 		"oxlint": "1.75.0",
-		"oxlint-tsgolint": "7.0.2001",
-		"tsx": "4.22.4"
+		"oxlint-tsgolint": "7.0.2001"
 	},
 	"dependencies": {
 		"react": "^19.0.0",

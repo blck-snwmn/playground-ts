@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"dev": "tsx watch src/index.tsx",
+		"dev": "bun --watch src/index.tsx",
 		"lint": "oxlint --deny-warnings .",
 		"lint:fix": "oxlint --deny-warnings . --fix",
 		"fmt": "oxfmt --write $(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')",
@@ -13,7 +13,6 @@
 	"devDependencies": {
 		"oxfmt": "0.54.0",
 		"oxlint": "1.75.0",
-		"oxlint-tsgolint": "7.0.2001",
-		"tsx": "4.22.4"
+		"oxlint-tsgolint": "7.0.2001"
 	}
 }

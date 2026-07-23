@@ -6,19 +6,19 @@ This project demonstrates Playwright Component Testing with React components.
 
 Install dependencies:
 ```bash
-pnpm install
+bun install
 ```
 
 ## Running Tests
 
 Run component tests:
 ```bash
-pnpm test-ct
+bun run test-ct
 ```
 
 Run tests with UI mode:
 ```bash
-pnpm test-ct:ui
+bun run test-ct:ui
 ```
 
 ## Project Structure
