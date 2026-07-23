@@ -45,7 +45,6 @@ jobs:
             "regexp"
             "sample-budoux"
             "sample-datefns"
-            "sample-honox"
             "sample-neverthrow"
             "sample-textlint"
             "statemachine"
